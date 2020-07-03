@@ -1,0 +1,279 @@
+\renewcommand{\implies}{\Rightarrow}
+\subsection{The state of mathematics at the turn of the 19th century}
+
+\subsection{Hilbert's program}
+
+\begin{frame}
+  \frametitle{Hilbert's program}
+  \begin{columns}
+    \begin{column}{.3\textwidth}
+      \begin{figure}[ht]  
+        \adjustimage{width=\textwidth,center}{Hilbert.jpg}
+        \caption*{David Hilbert}
+      \end{figure}
+    \end{column}
+    \begin{column}{.8\textwidth}
+      \textbf{goals:}
+      \begin{itemize}
+          %\item to formalize Mathematics \pause
+          %\item to show that everything that's true can be proven in a formal way \textbf{%(Completeness)} \pause
+          %\item to show that no contradictions can be obtained inside the formal system of %mathematics, preferably using solely finite reasoning \textbf{(Consistency)} \pause
+          %\item to show that every statement about \emph{real objects}, obtained using reasoning %about \emph{ideal objects}, can be proved without using ideal objects \textbf{%(Conservation)} \pause
+          %\item to show that for any mathematical statement there exists an algorithm to decide %whether it's true \textbf{(Decideability)} (famously known as the \emph%{Entscheidungsproblem})
+          \item Formalization
+          \pause \item Completeness
+          \pause \item Consistency
+          \pause \item Conservation
+          \pause \item Decideability
+        \end{itemize}
+        \onslide\text{of mathematics}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{What are formal systems?}
+\begin{frame}
+  \frametitle{What are formal systems?}
+  \begin{definition}[Formal system]
+    A formal system $\mathcal{F}$ is a quadruple $(\mathcal{A}, \mathcal{W}, \mathcal{I}, \mathcal{R})$ that statisfies:
+    \begin{itemize}
+        \pause \item $\mathcal{A}$ is an alphabet, so a set of symbols that can be concatenated.
+        \pause \item $\mathcal{W}$ is a subset of all words, that can be formed from elements of $\mathcal{A}$. It's the set of all well-formed formulas of $\mathcal{A}$.
+        \pause \item $\mathcal{I}$ is a subset of $\mathcal{W}$, that's called \emph{the axioms} of $\mathcal{F}$.
+        \pause \item $\mathcal{R}$ is a set of inference rules. If $w$ can be infered from $x$ we write $x \vdash w$.
+    \end{itemize}
+  \end{definition}
+\end{frame}
+
+%\begin{frame}
+%    \frametitle{An example}
+%    \begin{definition}[Lambda Calculus - semiformal]
+%        The lambda calculus is a formal system $\mathcal{F} = (\mathcal{A}, \mathcal{W}, \mathcal{I}, \mathcal%{R})$ where:
+%        \begin{itemize}
+%            \item $\mathcal{A} = \{\lambda, ., (, ), a, b, c, \hdots\}$ called variables
+%            \item $\mathcal{W}$ is defined inductively by the following rules:
+%            \begin{itemize}
+%                \item $\mathcal{A} \subset \mathcal{W}$ (variables are valid terms)
+%                \item $x \in \mathcal{A}, M \in \mathcal{W} \implies (\lambda x . M) \in \mathcal{W}$ (lambda %abstraction)
+%                \item $A, B \in W \implies (M N) \in \mathcal{W}$ (application)
+%            \end{itemize}
+%            \item The inference rules are as follows:
+%        \end{itemize}
+%        It may be helpful to think of \emph{inference} as \emph{syntactic implication}.
+%    \end{definition}
+%\end{frame}
+
+  \begin{frame}
+    \frametitle{An example}
+    \begin{definition}[Hofstadter's MIU-system]
+      MIU is a formal system $(\mathcal{A}, \mathcal{W}, \mathcal{I}, \mathcal{R})$, where:
+      \begin{itemize}
+          \pause \item The alphabet $\mathcal{A}$ consists is the set $\{M,I,U\}$.
+          \pause \item The set $\mathcal{W}$ of well formed strings are all possible, finite combinations of elements of $\mathcal{A}$: $\mathcal{W} = \bigcup_{n \in \mathbb{N}}\mathcal{A}^n$.
+          \pause \item The set of axioms is $\mathcal{I} = \{MI\}$.
+          \pause \item Let $x, y$ be metavariables standing in for some strings, then the inference rule are:
+          \begin{enumerate}
+            \item Given a string that ends in $I$ you can add an $U$ to the end: $xI \vdash xIU$.
+            \item Given a string $Mx$, where $x$ is some string, you can produce $Mxx$: $Mx \vdash Mxx$.
+            \item Given a string that contains $III$, you may produce a new string where $III$ is replaced by $U$: $xIIIy \vdash xUy$.
+            \item Given a string that contains $UU$, you can drop it: $xUUy \vdash xy$.
+          \end{enumerate}
+      \end{itemize}
+    \end{definition}
+  \end{frame}
+  
+% \begin{frame}
+%     \frametitle{An example of working inside MIU}
+%     \begin{columns}
+%       \begin{column}{0.3\textwidth}
+%         Rules of the system:
+%         \begin{align*}
+%           Axiom     &       && \vdash MI \\
+%           1.\;\;    & xI    && \vdash xIU \\
+%           2.\;\;    & Mx    && \vdash Mxx \\
+%           3.\;\;    & xIIIy && \vdash xUy \\
+%           4.\;\;    & xUUy  && \vdash xy
+%         \end{align*}
+%       \end{column}
+%       \hfill\vline\hfill
+%       \begin{column}{0.5\textwidth}
+%         Proof of $MUIIU$:
+%         \begin{align}
+%           & MI      & \text{(Axiom)}\\
+%           & MII     & \text{(Rule 2)}\\
+%           & MIIII   & \text{(Rule 2)}\\
+%           & MIIIIU  & \text{(Rule 1)}\\
+%           & MUIU    & \text{(Rule 3)}\\
+%           & MUIUUIU & \text{(Rule 2)}\\
+%           & MUIIU   & \text{(Rule 4)}
+%         \end{align}
+%       \end{column}
+%     \end{columns}
+% \end{frame}
+  
+\begin{frame}
+  \frametitle{Further examples}
+  \begin{itemize}
+    \item \textbf{Propositional logic} - allows to reason about statements: ''If it rains, then the street will be wet.''
+    \pause \item \textbf{Predicate logic} - allows to reason about statements containing variables: ''for all streets $s$: If it rains, then $s$ will be wet.'' 
+    \pause \item \textbf{Modal logic} - allows to talk about eventuality: ''It might rain.''
+    \pause \item \textbf{Temporal logic} - allows to reason about time: ''If the sky is grey now, then it might rain later.''
+    \pause \item \textbf{The lambda calculus} - important in theoretical computer science and the study of computability: $\lambda f.(\lambda x. f\;(x\; x)) (\lambda x. f\;(x\; x)))\; (\lambda x. x)$
+    % \pause \item \textbf{Combinator logic} - allows one to talk about computability without variables: $S I I (S (K (S I)) (S I I))$
+  \end{itemize}
+\end{frame}
+
+%  \begin{frame}
+%    \frametitle{Another example}
+%    \begin{definition}[Propositional Logic]
+%      Propositional Logic is a formal system $(\mathcal{A}, \mathcal{W}, %\mathcal{I}, \mathcal{R})$, where:
+%      \begin{itemize}
+%          \item The alphabet $\mathcal{A}$ consists of the set $\{t, f, p_1, %p_2, \hdots \}$ called the propositional variables, the set $\{(, )%\}$ of paranthesis and the set $\{\neg, \vee, \wedge, \implies\}$ %of logical connectives.
+%          \item The set $\mathcal{W}$ of formulas is inductively defined by %the following rules:
+%          \begin{itemize}
+%            \item Every propositional variable is a formula
+%            \item If $A$ is a formula so is $\neg A$.
+%            \item If $A$, $B$ are formulas so are $(A \wedge B)$, $(A \vee B)%$ and $(A \implies B)$.
+%          \end{itemize}
+%          \item A possible set of axioms is given by Jan Łukasiewicz.
+%          Let $p,q,r$ be metavariables, then:
+%          \begin{itemize}
+%              \item $(p \implies (q \implies p))$
+%              \item $((p \implies (q \implies r)) \implies ((p \implies q) %\implies (p \implies r)))$
+%              \item $((\neg p \implies \neg q) \implies (q \implies p))$
+%          \end{itemize}
+%          \item The inference rule is the \emph{modus ponens}: $(p \wedge (p %\implies q)) \vdash q$
+%      \end{itemize}
+%    \end{definition}
+%  \end{frame}
+
+%  \begin{frame}
+%    \frametitle{An example}
+%    \begin{definition}[Peano arithmetic]
+%      Hier könnte Ihr formales System stehen.
+%
+%      Peano arithmetic(PA) is a formal system $(\mathcal{A}, \mathcal{W}, %\mathcal{I}, \mathcal{R})$, where:
+%      \begin{itemize}
+%          \item The alphabet $\mathcal{A}$ consists of the set $\{S, 0, (, ), +\}%$.
+%          \item The set $\mathcal{W}$ of natural numbers is inductively defined %by the following rules:
+%          \begin{itemize}
+%              \item $0 \in \mathcal{W}$
+%              \item If $A$ is a natural number so is $S(A)$.
+%              \item If $A$, $B$ are formulas so is $(A + B)$.
+%          \end{itemize}
+%          \item 
+%          Let $p,q,r$ be metavariables, then:
+%          \begin{itemize}
+%              \item $(p \implies (q \implies p))$
+%              \item $((p \implies (q \implies r)) \implies ((p \implies q) %\implies (p \implies r)))$
+%              \item $((\neg p \implies \neg q) \implies (q \implies p))$
+%          \end{itemize}
+%          \item The inference rule is the modus ponens: $(p \wedge (p \implies q)%) \vdash q$
+%      \end{itemize}
+%    \end{definition}
+%\end{frame}
+
+\subsection{Gödel's proof}
+
+\begin{frame}
+    \frametitle{Gödel's proof}
+
+    \textbf{Basic idea:}
+    \begin{itemize}
+        \item encode statements of the formal system as numbers
+        \item use the formal system to reason about those numbers using number-theoretic methods
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Gödel numbering}
+    \begin{definition}[Gödel numbering]
+        Let $\mathcal{W}$ be the set of words of a formal system, then we call $g: \mathcal{W} \rightarrow \mathbb{N}$ a \emph{Gödel numbering} if:
+        \begin{itemize}
+            \pause \item $g$ is injective and computable
+            \pause \item the image $g(\mathcal{W})$ of $\mathcal{W}$ under $g$ is decideable (so given $a \in \mathbb{N}$ we can decide whether it is an element of the image)
+            \pause \item the inverse of $g$ on $g(\mathcal{W})$ is computable
+        \end{itemize}
+        %\pause If $g$ is a Gödel numbering and $w \in \mathcal{W}$, then we call $g(w)$ the \emph{Gödel number of $w$}.
+    \end{definition}
+    %\begin{definition}[Gödel encoding]
+    %    Let $n \in \mathbb{N}$, $(x_n)_{n \in \{1,\hdots,n\}}$ be an $\mathbb{N}$-valued sequence, and %$(p_n)_{n \in \{1,\hdots,n\}}$ be the sequence of the first $n$ primes, then we call $enc(x_1, %x_2, \hdots, x_n) := \prod_{i=0}^{n} p_n^{x_n}$ the Gödel encoding of $(x_n)$. 
+    %\end{definition}
+    \begin{columns}
+      \begin{column}{.4\textwidth}
+        \onslide\textbf{Informally:}\\A one to one mapping between words and some numbers.
+      \end{column}
+      \begin{column}{.6\textwidth}
+        \onslide\begin{figure}
+          \adjustimage{width=.9\textwidth, keepaspectratio}{goedelnumbering.png}
+        \end{figure}
+      \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Gödel numbering}
+  \begin{definition}[Gödel encoding]
+      Let $n \in \mathbb{N}$, $(x_n)_{n \in \{1,\hdots,n\}}$ be an $\mathbb{N}$-valued sequence, and $(p_n)_{n \in \{1,\hdots,n\}}$ be the sequence of the first $n$ primes, then we call $enc(x_1, x_2, \hdots, x_n) := \prod_{i=0}^{n} p_n^{x_n}$ the Gödel encoding of $(x_n)$. 
+  \end{definition}
+
+  \pause \textbf{Example:}\\$enc(4,2,5) = 2^4 \cdot 3^2 \cdot 5^5 = 450,000$
+\end{frame}
+
+
+\subsection{Gödel's incompleteness theorems}
+\begin{frame}
+  \frametitle{Gödel's incompleteness theorems}
+  %Gödel's first incompleteness theorem first appeared as "Theorem VI" in Gödel's 1931 paper "On Formally Undecidable Propositions of Principia Mathematica and Related Systems I". The hypotheses of the theorem were improved shortly thereafter by J. Barkley Rosser (1936) using Rosser's trick. The resulting theorem (incorporating Rosser's improvement) may be paraphrased in English as follows, where "formal system" includes the assumption that the system is effectively generated. 
+
+  \begin{theorem}[First incompleteness theorem]
+    Any consistent formal system $\mathcal{F}$ within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e. there are statements of the language of $\mathcal{F}$ which can neither be proven nor disproven in $\mathcal{F}$.
+  \end{theorem}
+  \pause
+  \begin{theorem}[Second incompleteness theorem]
+    Assume $\mathcal{F}$ is a consistent formalized system which contains elementary arithmetic. Then $\mathcal{F} \not \vdash \text{Cons}(\mathcal{F})$.
+  \end{theorem}
+
+  \pause
+  \begin{center}
+    The second theorem may be informally stated as:\\
+    \textbf{No system can prove itself consistent.}\\
+    \tiny{(not even indirectly)}
+  \end{center}
+\end{frame}
+
+%\begin{frame}
+%  \frametitle{What's the big deal?}
+%  \begin{figure}
+%    \adjustimage{width=\textwidth, height=.7\textheight, keepaspectratio}{strange_loop.jpg}
+%    \caption*{\emph{Drawing Hands} by M.C. Escher}
+% \end{figure}
+%\begin{quotation}
+%  ...a consistency proof for [any] system ... can be carried out only by means of modes of inference that are not formalized in the system ... itself.
+%\end{quotation}
+%\end{frame}
+
+\subsection{Instances of Gödel's incompleteness theorems}
+
+\begin{frame}
+    \frametitle{Instances of Gödel's incompletenes theorems}
+    \textbf{Examples:}
+    \begin{itemize}
+      \item are mostly quite complicated
+      \item can be found in graph theory, combinatorics (e.g. the Paris-Harrington theorem)
+    \end{itemize}
+    
+    \begin{columns}
+      \begin{column}{.5\textwidth}
+        \begin{figure}
+          \adjustimage{width=\textwidth, keepaspectratio}{zeta.png}
+        \end{figure}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        The interested among you can find examples in John Stillwell's \emph{''Roads to Infinity: The Mathematics of Truth and Proof''}.
+      \end{column}
+    \end{columns}
+
+
+    %It's conjectured that the Riemann hypothesis may be undecidable (weirdly enough, a proof of this fact would actually proof the Riemann hypothesis). 
+\end{frame}

@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Allgemeines zur FHWS}{2}{0}{1}
+\beamer@sectionintoc {2}{Was ist Technomathematik?}{4}{0}{2}
+\beamer@sectionintoc {3}{Was macht ein Technomathematiker eigentlich?}{10}{0}{3}
+\beamer@sectionintoc {4}{Berufsm\IeC {\"o}glichkeiten}{12}{0}{4}

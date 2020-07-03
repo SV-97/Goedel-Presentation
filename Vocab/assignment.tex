@@ -1,0 +1,145 @@
+%%% Template originaly created by Karol Kozioł (mail@karol-koziol.net) and modified for ShareLaTeX use
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\renewcommand\familydefault{\sfdefault}
+%\usepackage{tgheros}
+%\usepackage[defaultmono]{droidmono}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pdfpages}
+\usepackage{graphics}
+
+\usepackage{geometry}
+\geometry{left=15mm,right=15mm,%
+bindingoffset=0mm, top=10mm,bottom=10mm}
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textsc{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\@author \hfill \@date
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+%\lfoot{Assignment \textnumero{} 2}
+\cfoot{}
+% \rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\impliesBecause}[1]{\underset{#1}{\implies}}
+
+%
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+\title{Kurt Gödel\\\Large\text{Cheat-sheet}}
+
+\author{Anna Frank, Stefan Volz}
+
+\date{03.07.2020}
+
+\maketitle
+
+\begin{center}
+    \textbf{Potentially unfamiliar words}\\
+    \begin{tabular}{c c c}
+        English & German & Example \\
+        \hline
+        to concatenate & aneinaderhängen/verketten & I can concatenate two lists [a,b] and [c,d] to get [a,b,c,d]. \\
+        to infer & ableiten/folgern & You can infer that $1+1$ is a number, \\
+        &&because $+$ is an operation on numbers. \\
+        inference & Schlussfolgerung  & Type inference allows you to omit explicit declarations.\\
+        to reason & argumentieren & We can reason about the integers using algebra, \\
+        & &  because they form a group. \\
+        to prove & beweisen & Let's prove the Riemann hypothesis. \\
+        excerpt & Auszug & This is an excerpt from the text: ... \\
+        congregation & Gemeinde & My local christian congregation meets at church every sunday. \\
+        sanatorium & Heilanstalt & He had to spend some time in a sanatorium for mental reasons. \\
+        cineaste & Filmliebhaber & She really loves movies - you could say she's a cineast. \\
+        consistency & Widerspruchsfreiheit & \\
+        gastrointestinal disease & Magen-Darm Krankheit & \\
+    \end{tabular}
+\end{center}
+
+
+\begin{center}
+    \textbf{A small primer on the necessary mathematics}\\
+    \begin{tabular}{c c}
+        Term & Explanation\\
+        \hline
+        injective function & A function f is injective if $f(x) = f(y)$ implies that $x = y$. \\
+        & $x \mapsto x$ is injective. \\
+        image of a function & All values that a function actually takes on. \\
+        & The image of $x \mapsto x^2$ are all nonnegative real numbers. \\
+        $S$-valued sequence & Sequence of elements from $S$. $(1,-1,1,-1,...)$ is an $\{-1, 1\}$-valued sequence \\
+
+    \end{tabular}
+\end{center}
+
+\end{document}

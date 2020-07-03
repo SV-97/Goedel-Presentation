@@ -1,0 +1,50 @@
+Vocab aufmachen und in Chat schicken!
+
+
+Stefan - Biography:
+So who was Kurt Gödel?
+
+Kurt Gödel was born in Austria-Hungary in 1906 as the child of a quite wealthy family - here he also spent his early childhood. After finishing school with flying colours he pursued a degree in Vienna. He began by studying theoretical physics but eventually got more and more interested in logic and the foundations of mathematics. At the age of just 24 years he finished his doctorate. When the second world war broke out he fled to the US with his wife and settled down in Princeton.
+This is also where he got to know Albert Einstein very well. They eventually became close friends and Einstein once even said that he went to his office "just to have the privilege of walking home with Kurt Gödel".
+A short anecdote:
+In 1946 Gödel was to finally become a citizen of the US. For this end he had to appear before court with two witnesses and was to answer a few questions. One of those witnesses was Albert Einstein and the other was Oskar Morgenstern who also delivered a quite funny story from the hearing which Anna is going to tell you in a somewhat shortened version:
+
+Anna:
+The examiner in the court asked Gödel where he was from and what the political system there was like. Gödel answered that he was from Austria - and that it was a republic by design, but was changed into a dictatorship because of flaws in the constitution. The examinor replied that this was very unfortunate and that something like this could never happen in the US.
+Now Gödel being Gödel he had studied the US constitution very closely in the weeks leading up to the hearing. So very confidently he replied that it actually could - and that he could even prove it to the examinor - who was very quick in changing the topic to protect Gödel from being denied citizenship.
+
+Stefan - the Hilbert Program:
+At the turn of the 19th century mathematics was in what is called the foundational crisis of mathematics. There wasn't a unified foundation for maths and various paradoxes were plaguing mathematicians and philosophers. To do away with this problem, David Hilbert proposed what is known as the Hilbert Program. It was aimed at formalizing the foundations of mathematics, an area in which Gödel took great interest and in which he ultimately published his greatest work and one of the biggest results of modern mathematics.
+
+
+Gödel's work revolved around what is known as formal systems. To get an idea of what Gödel's proofs are about, we'll have to know what formals systems exactly are, so we'll start with their definition.
+Symbol is called turnstile, kind of comparable to implication in the logic we usually use - but happens at a purely syntactic level rather than at the level of semantics. It just manipulates symbols.
+
+Since this is quite abstract we'll do a small example
+Douglas R. Hofstadter in his book Gödel, Escher, Bach
+
+Gödel sentence
+
+
+So, what impact did Gödel's work really have? If you look at today's foundations of mathematics and what logicians today are working on - you can clearly see Gödel's influence. The relatively young field of type theory for example is relying heavily on his ideas. The importance of Gödel's work is summed up quite succinctly by this quote by his brother Rudolf Gödel: It seems clear that the fruitfulness of his ideas will continue to stimulate new work, few mathematicians are granted this kind of immortality.
+
+With that we're at the end of our presentation - thanks for your attention and if you have any questions please ask away.
+
+
+
+
+
+
+
+
+Let me tell you a little anecdote about Gödel:
+You see, he lived in Vienna for most of his early professional life - and occassionaly visited Princeton in the US. In 1938 the nazis rose to power in Austria and he found himself out of a job because he associated with jews. When Germany found him fit for military service and wanted to draft him he decided to leave. He and his wife embarked on a journey through Siberia, Japan and San Francisco, until they eventually reached Princeton, where they lived for a few years.
+
+In 1946 Gödel was to become a citizen of the US. For this end he had to appear before court with two witnesses and was to answer a few questions. The two witnesses he chose were his friends Oskar Morgenstern and Albert Einstein.
+Now, Gödel being Gödel he of course prepared vigirously for this hearing and, among other things, studied the constitution very closely. In his studies he held a close correspondence with Morgenstern, whom he questioned on all sorts of things.
+Eventually he told Morgenstern that, to his distress, he had found contradictions in the constitution that allowed one to become a dictator and set up a fascist regime without ever stepping outside the law's boundaries. His friends pleaded him to not bring this up in the hearing as the feared it might jeopardize his naturalization.
+
+Eventually the day of Gödel's hearing came and Morgenstern and Einstein picked him up by car. Einstein immediately started picking on him, asking if he was prepared well enough. Einstein took great joy in how upset Gödel got over this.
+The examiner started by questioning Morgenstern and Einstein about Gödel and they vowed that he was a distinguished man and would make a great citizen. He went on to ask Gödel himself about his origins and the kind of government they had. Gödel answered that it was a republic that because of flaws in the constitution, was eventually changed into a dictatorship. The examinor told him that this was very bad - but that it could never happen in the US.
+This of course was exactly what Gödel was waiting for and he proceeded by telling the examinor about how he had actually found flaws in the US constitution and that he could proof it to him.
+To Einstein and Morgenstern's relief the examinor immediatley stopped Gödel in his tracks and he was granted the citizenship.

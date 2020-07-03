@@ -1,0 +1,15 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Who was Kurt G\IeC {\"o}del?}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Basic biography}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{A short anecdote}{6}{0}{1}
+\beamer@sectionintoc {2}{''We must know. We will know.'' - G\IeC {\"o}del and the Hilbert program}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{The state of mathematics at the turn of the 19th century}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Hilbert's program}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{What are formal systems?}{13}{0}{2}
+\beamer@subsectionintoc {2}{4}{G\IeC {\"o}del's proof}{28}{0}{2}
+\beamer@subsectionintoc {2}{5}{G\IeC {\"o}del's incompleteness theorems}{35}{0}{2}
+\beamer@subsectionintoc {2}{6}{Instances of G\IeC {\"o}del's incompleteness theorems}{38}{0}{2}
+\beamer@sectionintoc {3}{G\IeC {\"o}del's ontological proof}{39}{0}{3}
+\beamer@subsectionintoc {3}{1}{G\IeC {\"o}del's ontological proof}{40}{0}{3}
+\beamer@sectionintoc {4}{Death and Legacy}{51}{0}{4}
+\beamer@sectionintoc {5}{Interactive Q\&A}{55}{1}{5}

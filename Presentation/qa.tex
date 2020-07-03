@@ -1,0 +1,25 @@
+\newcommandx{\question}[3][2=yes, 3=no]{{
+    \begin{frame}
+        \centering#1 \\
+        \begin{columns}
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                    \adjustimage{width=0.5cm, keepaspectratio}{yes_logo}
+                    \caption*{#2}
+                \end{figure}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                    \adjustimage{width=0.5cm, keepaspectratio}{no_logo}
+                    \caption*{#3}
+                \end{figure} 
+            \end{column}
+        \end{columns}
+    \end{frame}
+    }}
+
+\question{After Gödel wrote his ontological proof he couldn't handle the truth and got addicted to cocaine.}[True][False]
+\question{Kurt Gödel had a total of three different citizenships in two different continents.}[True][False]
+\question{Gödel's wife Adele Nimbusky was a stripper by profession.}[True][False]
+\question{In his free time, Gödel was a passionate cineaste and his absolute favourite movie was King Kong.}[True][False]

@@ -1,0 +1,115 @@
+
+\usetheme[progressbar=frametitle]{metropolis}
+
+%\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{newunicodechar}
+\usepackage[utf8]{inputenc}
+
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+% For pseudo codes
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+%
+
+\usepackage{multirow}
+\usepackage[none]{hyphenat}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\sloppy 
+%\usebackgroundtemplate
+
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+\usepackage{fancyhdr}
+
+\usepackage{xargs}
+
+\usepackage{chronology} % timeline
+\usepackage{changepage} % adjustwidth environment
+% \usepackage{stmaryrd} % lightning
+
+\setbeamercolor{background canvas}{bg=white!20}
+
+\title{Kurt Gödel}
+\subtitle{Mathematician, Logician, Philosopher}
+\date{03.07.2020}
+\author{Anna Frank, Stefan Volz}
+\institute{University of Applied Sciences Würzburg-Schweinfurt\\Faculty of Applied Natural Sciences and Humanities\\B.Sc. Industrial Mathematics\\English for industrial mathematicians}
+\titlegraphic{\small\center
+\flushright\includegraphics[height=1.0cm]{FHWS}}
+
+\rhead{\includegraphics[width=1.5cm]{FHWS}}
+
+\logo{\includegraphics[width=1cm]{FHWS}\hfill}
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
+\newcommand{\congress}{\hspace{1cm}\small{Frank, Volz}} % 1cm offset to compensate for 1cm logo
+
+% footer
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+
+  \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1ex,center]{institute in head/foot}%
+    \usebeamerfont{abstract}%
+    \congress
+  \end{beamercolorbox}%
+
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=2ex,center]{institute in head/foot}%
+    \usebeamerfont{abstract} 
+    \insertframenumber{} / \inserttotalframenumber 
+  \end{beamercolorbox}}% 
+  
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+    \insertsubsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+}
+
+% remove indents at paragraphs
+\setlength{\parindent}{0pt}
+
+% remove indentation of first line of quotation
+% from: https://tex.stackexchange.com/questions/149868/define-quotation-environment-without-indentation-of-the-first-paragraph
+\renewenvironment{quotation}
+  {\list{}{\listparindent 1.5em%
+          %\itemindent    \listparindent
+          %\rightmargin \leftmargin
+          \parsep        \z@ \@plus\p@}%
+  \item\relax}
+{\endlist}
+
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%  \frametitle{Overview}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \tableofcontents[currentsection, currentsubsection, 
+%  hideothersubsections, 
+%  sectionstyle=show/shaded,]
+%  \end{frame}
+%}
+
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}some text\hfill\insertshortauthor\hfill\insertpagenumber}}
+%\setbeamertemplate{navigation symbols}{}
+
+\setcounter{tocdepth}{1} % only show sections in TOC
+
+\makeatother
